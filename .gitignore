@@ -1,3 +1,10 @@
+# macOS
+.DS_Store
+
+# Visual Studio Code
+.vscode/
+.vsls.json
+
 # Logs
 logs
 *.log
@@ -90,6 +97,8 @@ out
 # Nuxt.js build / generate output
 .nuxt
 dist
+dist-types
+dist-workspace
 
 # Gatsby files
 .cache/
@@ -128,3 +137,11 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Yarn 3 files
+**/.yarn/*
+!**/.yarn/patches
+!**/.yarn/plugins
+!**/.yarn/releases
+!**/.yarn/sdks
+!**/.yarn/versions

@@ -1,0 +1,36 @@
+{
+  "name": "eslint-plugin-backstage-material-ui-path-imports",
+  "description": "ESLint plugin for Material UI path imports",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.esm.js",
+    "types": "dist/index.d.ts"
+  },
+  "backstage": {
+    "role": "common-library"
+  },
+  "scripts": {
+    "build": "backstage-cli package build",
+    "start": "backstage-cli package start",
+    "lint": "backstage-cli package lint",
+    "test": "backstage-cli package test",
+    "prepack": "backstage-cli package prepack",
+    "postpack": "backstage-cli package postpack",
+    "clean": "backstage-cli package clean"
+  },
+  "dependencies": {
+    "eslint": "^8.0.0"
+  },
+  "devDependencies": {
+    "@backstage/cli": "0.22.10-next.1",
+    "@types/eslint": "^8.0.0",
+    "typescript": "^5.1.6"
+  },
+  "files": [
+    "dist"
+  ]
+}

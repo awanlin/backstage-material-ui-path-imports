@@ -1,0 +1,45 @@
+{
+  "name": "root",
+  "license": "Apache-2.0",
+  "private": true,
+  "engines": {
+    "node": "16 || 18"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "@backstage/cli": "^0.22.10",
+    "@spotify/eslint-plugin": "^14.1.3",
+    "@spotify/prettier-config": "^14.0.0",
+    "@types/node": "^16.11.26",
+    "eslint": "^8.6.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-testing-library": "^5.9.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.0",
+    "prettier": "^2.2.1",
+    "ts-node": "^10.4.0",
+    "typescript": "~4.9.0"
+  },
+  "prettier": "@spotify/prettier-config",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mjs,cjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "packageManager": "yarn@3.6.2",
+  "scripts": {
+    "lint": "backstage-cli repo lint --since origin/master",
+    "lint:all": "backstage-cli repo lint",
+    "test": "backstage-cli repo test",
+    "prepare": "husky install",
+    "postinstall": "husky install || true"
+  }
+}
